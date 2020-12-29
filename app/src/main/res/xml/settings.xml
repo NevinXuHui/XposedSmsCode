@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <PreferenceCategory android:title="@string/pref_code_records_title">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="@string/pref_enable"
+            android:icon="@drawable/ic_lock_open"
+            android:key="@string/pref_enable_code_records"
+            android:title="@string/pref_enable_code_records_title"/>
+
+        <Preference
+            android:icon="@drawable/ic_records"
+            android:key="@string/pref_entry_code_records"
+            android:persistent="false"
+            android:summary="@string/pref_entry_code_records_summary"
+            android:title="@string/pref_entry_code_records_title"/>
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/pref_general_title">
 
         <SwitchPreference
@@ -23,8 +39,7 @@
             android:title="@string/pref_choose_theme_title"/>
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/pref_sms_code_title">
+    <PreferenceCategory android:title="@string/pref_sms_code_title">
 
         <SwitchPreference
             android:defaultValue="true"
@@ -104,24 +119,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/pref_code_records_title">
-        <SwitchPreference
-            android:defaultValue="true"
-            android:dependency="@string/pref_enable"
-            android:icon="@drawable/ic_lock_open"
-            android:key="@string/pref_enable_code_records"
-            android:title="@string/pref_enable_code_records_title"/>
-
-        <Preference
-            android:icon="@drawable/ic_records"
-            android:key="@string/pref_entry_code_records"
-            android:persistent="false"
-            android:summary="@string/pref_entry_code_records_summary"
-            android:title="@string/pref_entry_code_records_title"/>
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/pref_match_rules">
+   <PreferenceCategory android:title="@string/pref_match_rules">
 
         <com.tianma.xsmscode.common.preference.ResetEditPreference
             android:defaultValue="@string/default_smscode_keywords"
@@ -149,8 +147,7 @@
             android:title="@string/pref_smscode_test_title"/>
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="@string/pref_experimental"
+    <PreferenceCategory android:key="@string/pref_experimental"
         android:title="@string/pref_experimental_title">
 
         <SwitchPreference
@@ -187,8 +184,7 @@
             android:title="@string/pref_verbose_log_mode_title"/>
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="@string/pref_about"
+    <PreferenceCategory android:key="@string/pref_about"
         android:title="@string/pref_about_title">
 
         <Preference

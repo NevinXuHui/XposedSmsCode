@@ -8,14 +8,15 @@ buildscript {
         mavenCentral() // add repository
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle'
         
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // greenDao plugin
 
-        classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.17' // AndResGuard
+        classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.17'
+        classpath 'com.android.tools.build:gradle:3.5.4'// AndResGuard
     }
 }
 
