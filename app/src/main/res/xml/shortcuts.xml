@@ -7,8 +7,8 @@
         android:shortcutShortLabel="@string/smscode_records">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.tianma.xsmscode.ui.record.CodeRecordActivity"
-            android:targetPackage="com.github.tianma8023.xposed.smscode"/>
+            android:targetClass="com.nevinxu.xsmscode.ui.record.CodeRecordActivity"
+            android:targetPackage="com.github.nevinxu0725.xposed.smscode"/>
         <categories
             android:name="android.shortcut.conversation"/>
     </shortcut>
@@ -20,8 +20,8 @@
         android:shortcutShortLabel="@string/pref_code_rules_title">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.tianma.xsmscode.ui.rule.CodeRulesActivity"
-            android:targetPackage="com.github.tianma8023.xposed.smscode"/>
+            android:targetClass="com.nevinxu.xsmscode.ui.rule.CodeRulesActivity"
+            android:targetPackage="com.github.nevinxu0725.xposed.smscode"/>
         <categories
             android:name="android.shortcut.conversation"/>
     </shortcut>
@@ -33,8 +33,8 @@
         android:shortcutShortLabel="@string/get_red_packet">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.tianma.xsmscode.ui.home.HomeActivity"
-            android:targetPackage="com.github.tianma8023.xposed.smscode">
+            android:targetClass="com.nevinxu.xsmscode.ui.home.HomeActivity"
+            android:targetPackage="com.github.nevinxu0725.xposed.smscode">
             <extra android:name="extra_action" android:value="get_red_packet"/>
         </intent>
         <categories

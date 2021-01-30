@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao' // apply greenDao plugin
 apply from: 'and-res-guard.gradle'
 
-def keyFile = file(findProperty("tianma.keystore.path") as String)
-def propertyFile = file(findProperty("tianma.signature.path") as String)
+def keyFile = file(findProperty("nevinxu.keystore.path") as String)
+def propertyFile = file(findProperty("nevinxu.signature.path") as String)
 
 def keyProps = new Properties()
 if (propertyFile.exists()) {
@@ -17,7 +17,7 @@ def static releaseTime() {
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.github.tianma8023.xposed.smscode"
+        applicationId "com.github.nevinxu0725.xposed.smscode"
         minSdkVersion 23
         targetSdkVersion 27
         versionCode 44
@@ -32,7 +32,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ eventBusIndex : 'com.tianma.xsmscode.data.eventbus.MyEventBusIndex' ]
+                arguments = [ eventBusIndex : 'com.nevinxu.xsmscode.data.eventbus.MyEventBusIndex' ]
             }
         }
     }

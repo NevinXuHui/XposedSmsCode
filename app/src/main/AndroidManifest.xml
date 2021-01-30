@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.github.tianma8023.xposed.smscode">
+          package="com.github.nevinxu0725.xposed.smscode">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name="com.tianma.xsmscode.ui.app.SmsCodeApplication"
+        android:name="com.nevinxu.xsmscode.ui.app.SmsCodeApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,7 +29,7 @@
             android:value="30"/>
 
         <activity
-            android:name="com.tianma.xsmscode.ui.home.HomeActivity"
+            android:name="com.nevinxu.xsmscode.ui.home.HomeActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
@@ -42,7 +42,7 @@
         <activity-alias
             android:name=".HomeActivityAlias"
             android:enabled="true"
-            android:targetActivity="com.tianma.xsmscode.ui.home.HomeActivity">
+            android:targetActivity="com.nevinxu.xsmscode.ui.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -54,7 +54,7 @@
         </activity-alias>
 
         <activity
-            android:name="com.tianma.xsmscode.ui.rule.CodeRulesActivity"
+            android:name="com.nevinxu.xsmscode.ui.rule.CodeRulesActivity"
             android:exported="true"
             android:label="@string/import_rules">
             <intent-filter>
@@ -97,11 +97,11 @@
         </activity>
 
         <activity
-            android:name="com.tianma.xsmscode.ui.record.CodeRecordActivity"
+            android:name="com.nevinxu.xsmscode.ui.record.CodeRecordActivity"
             android:label="@string/smscode_records"/>
 
         <activity
-            android:name="com.tianma.xsmscode.ui.block.AppBlockActivity"
+            android:name="com.nevinxu.xsmscode.ui.block.AppBlockActivity"
             android:label="@string/app_block_settings"/>
 
         <activity
@@ -117,7 +117,7 @@
             android:theme="@style/AppActionBarTheme"/>
 
         <provider
-            android:name="com.tianma.xsmscode.data.db.DBProvider"
+            android:name="com.nevinxu.xsmscode.data.db.DBProvider"
             android:authorities="${applicationId}.db.provider"
             android:exported="true"/>
 

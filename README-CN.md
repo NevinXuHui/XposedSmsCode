@@ -6,7 +6,7 @@
 # 应用截图
 <img src="art/cn/01.png" width="180"/><img src="art/cn/02.png" width="180"/><img src="art/cn/03.png" width="180"/>
 
-可以在 [Xposed仓库](http://repo.xposed.info/module/com.github.tianma8023.xposed.smscode) 或者 [酷安](https://www.coolapk.com/apk/com.github.tianma8023.xposed.smscode) 下载此模块。
+可以在 [Xposed仓库](http://repo.xposed.info/module/com.github.nevinxu0725.xposed.smscode) 或者 [酷安](https://www.coolapk.com/apk/com.github.nevinxu0725.xposed.smscode) 下载此模块。
 
 # 使用
 1. Root你的设备，安装Xposed框架；

@@ -6,7 +6,7 @@
     public void initZygote(...);
 }
 
--keep class com.tianma.xsmscode.common.utils.ModuleUtils {
+-keep class com.nevinxu.xsmscode.common.utils.ModuleUtils {
     int getModuleVersion();
 }
 
@@ -18,7 +18,7 @@
 #   public <init> (org.json.JSONObject);
 #}
 #
-#-keep public class com.github.tianma8023.xposed.smscode.R$*{
+#-keep public class com.github.nevinxu0725.xposed.smscode.R$*{
 #public static final int *;
 #}
 #

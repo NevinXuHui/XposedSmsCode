@@ -121,7 +121,7 @@
 
    <PreferenceCategory android:title="@string/pref_match_rules">
 
-        <com.tianma.xsmscode.common.preference.ResetEditPreference
+        <com.nevinxu.xsmscode.common.preference.ResetEditPreference
             android:defaultValue="@string/default_smscode_keywords"
             android:hint="@string/code_keywords_hint"
             android:icon="@drawable/ic_key_words"

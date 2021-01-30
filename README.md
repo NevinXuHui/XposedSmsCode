@@ -6,7 +6,7 @@ An Xposed module which can recognize ,parse SMS code and copy it to clipboard wh
 # Screenshots
 <img src="art/en/01.png" width="180"/><img src="art/en/02.png" width="180"/><img src="art/en/03.png" width="180"/>
 
-You can download this module on [Xposed Repository](http://repo.xposed.info/module/com.github.tianma8023.xposed.smscode) or [Coolapk](https://www.coolapk.com/apk/com.github.tianma8023.xposed.smscode). 
+You can download this module on [Xposed Repository](http://repo.xposed.info/module/com.github.nevinxu0725.xposed.smscode) or [Coolapk](https://www.coolapk.com/apk/com.github.nevinxu0725.xposed.smscode). 
 
 # Usage
 1. Root your device and install Xposed Framework.
