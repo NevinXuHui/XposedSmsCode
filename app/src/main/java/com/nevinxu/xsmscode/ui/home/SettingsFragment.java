@@ -1,5 +1,6 @@
 package com.nevinxu.xsmscode.ui.home;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -91,7 +92,6 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         // general group
         if (!ModuleUtils.isModuleEnabled()) {
             Preference enablePref = findPreference(PrefConst.KEY_ENABLE);
-            // enablePref.setEnabled(false);
             enablePref.setSummary(R.string.pref_enable_summary_alt);
         }
 
@@ -148,16 +148,15 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         mPresenter.setInternalFilesWritable();
     }
 
-    @Override
-    public void showEnableModuleDialog() {
+    private void showEnableModuleDialog() {
         new MaterialDialog.Builder(mActivity)
                 .title(R.string.enable_module_title)
                 .content(R.string.enable_module_message)
                 .neutralText(R.string.ignore)
                 .negativeText(R.string.taichi_users_notice)
                 .onNegative((dialog, which) -> mActivity.onTaichiUsersNoticeSelected())
-                .positiveText(R.string.open_xposed_installer)
-                .onPositive((dialog, which) -> openXposedInstaller())
+                .positiveText(R.string.edxposed_users_notice)
+                .onPositive((dialog, which) -> mActivity.onEdxposedUsersNoticeSelected())
                 .show();
     }
 
@@ -312,5 +311,17 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
                 .negativeText(R.string.update_from_github)
                 .onNegative((dialog, which) -> mPresenter.updateFromGithub())
                 .show();
+    }
+
+    @Override
+    public void updateUIByModuleStatus(boolean moduleEnabled) {
+        Preference enablePref = findPreference(PrefConst.KEY_ENABLE);
+        if(moduleEnabled) {
+            enablePref.setSummary(R.string.pref_enable_summary);
+        } else {
+            enablePref.setSummary(R.string.pref_enable_summary_alt);
+
+            showEnableModuleDialog();
+        }
     }
 }

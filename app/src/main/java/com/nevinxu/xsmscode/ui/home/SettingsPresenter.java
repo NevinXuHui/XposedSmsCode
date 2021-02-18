@@ -1,9 +1,12 @@
 package com.nevinxu.xsmscode.ui.home;
 
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
 
 import com.github.nevinxu0725.xposed.smscode.BuildConfig;
@@ -67,9 +70,10 @@ public class SettingsPresenter implements SettingsContract.Presenter {
             args.remove(EXTRA_ACTION);
             mView.showGetAlipayPacketDialog();
         } else {
-            if (!ModuleUtils.isModuleEnabled()) {
-                mView.showEnableModuleDialog();
-            }
+            Handler handler = new Handler(Looper.getMainLooper());
+            handler.postDelayed(() -> {
+                mView.updateUIByModuleStatus(ModuleUtils.isModuleEnabled());
+            }, 50L);
         }
     }
 
